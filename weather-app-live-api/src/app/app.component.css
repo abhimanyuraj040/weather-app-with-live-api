@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+
+    --raisin-black: hsl(240, 20%, 17%);
+    --silver-chalice: hsl(0, 0%, 67%);
+    --blue-jeanse: hsl(202, 100%, 50%);
+    --dark-blue-jeanse: hsl(202, 100%, 16%);
+    --white: hsl(0, 0%, 100%);
+    --xiketic: hsl(240, 21%, 9%);
+    --xiketic-black: hsl(240, 22%, 10%);
+    --space-cadet: hsl(220, 37%, 21%);
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", serif;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+img, span, ion-icon, a{ display: block; }
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--xiketic-black);
+}
+
+.wrapper { position: relative; }
+
+.card-rotate-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(110deg, var(--blue-jeanse), var(--dark-blue-jeanse));
+    transform-origin: top left;
+    transition: all .5s ease;
+}
+
+    
+
+.card{
+    position: relative;
+    background: var(--raisin-black);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+    .card:hover .product-img{ transform: scale(1);}
+
+    .card:hover .bid-btn{ transform: translate(-50%, -50%) scale(1);}
+
+.card-head{
+    /* position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px; */
+    height: 30vh;
+    width: 40vh; /* Sets height to viewport height */
+
+    background-image: url('https://as1.ftcdn.net/v2/jpg/02/40/51/18/1000_F_240511806_5hQOySloxRteG8L7w1jhvicsMNuooq4j.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .card-head h2{
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .card-head h4{
+        color:rgb(254, 255, 255);
+        margin-left: 25px;
+        text-align: center;
+        padding-top: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .card-head .product-img{
+        width: 100%;
+        transform: scale(1.1);
+        transition: all .5s ease;
+    }
+
+    .card-head .bid-btn{
+        position: absolute;
+        background: var(--blue-jeanse);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        border-radius: 5px;
+        transition: all .5s ease;
+    }
+
+        .card-head .bid-btn:hover{ background: var(--raisin-black);}
+
+.card-body{ padding: 10px; }
+
+    .card-body .product-name{ margin-bottom: 55px; color:rgb(255, 255, 255)}
+
+        .card-body .product-name a { 
+            color: var(--white);
+            transition: all .25s ease;
+        }
+
+            .card-body .product-name a:hover { color: var(--blue-jeanse); }
+
+    .card-body .latest-bid{
+        color: var(--silver-chalice);
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+        
+
+.wrapper-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+    .wrapper-flex.mb{ margin-bottom: 15px; }
+
+    .wrapper-flex .last-bid{
+        color: var(--blue-jeanse);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .wrapper-flex .maxTemp{
+        color: var(--blue-jeanse);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .wrapper-flex .react{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        color: var(--silver-chalice);
+        transition: all .25s ease;
+    }
+
+        .wrapper-flex .react:hover{
+            background: var(--blue-jeanse);
+            color: var(--white);
+        }
+
+            .wrapper-flex .react ion-icon{
+                --ionicon-stroke-width: 50px;
+                font-size: 14px;
+                margin-right: 3px;
+            }
+
+            .wrapper-flex .react span { font-size: 12px; }
+
+.bid-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .bid-info .img-box{ 
+        display: flex;
+        padding-left: 10px;
+    }
+
+        .bid-info .img-box img{
+            width: 25px;
+            border-radius: 50%;
+            margin-right: 0;
+            margin-left: -10px;
+            border: 2px solid var(--xiketic);
+        }
+
+    .bid-info a{
+        color: var(--silver-chalice);
+        font-size: 13px;
+        transition: all .25s ease;
+    }
+
+        .bid-info a:hover { color: var(--blue-jeanse); }
+
+.share-btn{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all .25s ease;
+}
+
+    .share-btn:hover { background: var(--space-cadet); }
+    .share-btn ion-icon { color: var(--silver-chalice);}
