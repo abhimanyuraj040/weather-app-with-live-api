@@ -13,8 +13,8 @@
       <div class="card">
         <div class="card-head">
           <!-- <img src="https://i.postimg.cc/RVFh2hkV/portfolio.jpg" alt="image" class="product-card"> -->
-          <h4>New Delhi</h4> 
-          <h2>20deg C</h2>
+          <h4> {{country}} </h4> 
+          <h2> {{temp}}°C</h2>
           
           
         </div>
@@ -30,19 +30,19 @@
           
   
           <div class="wrapper-flex">
-            <div class="last-bid">19deg C</div>
+            <div class="last-bid">Min Temp: {{temp_min}}°C</div>
   
             <div class="maxTemp">
-              40deg C
+              Max Temp : {{temp_max}}°C
             </div>
           </div>
           <br/>
           <br/>
           <div class="wrapper-flex">
-            <div class="last-bid">19deg C</div>
+            <div class="last-bid">Feels Like: {{feels_like}}°C</div>
   
             <div class="maxTemp">
-              40deg C
+              {{desc}}
             </div>
           </div>
         </div>
