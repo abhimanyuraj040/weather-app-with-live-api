@@ -6,15 +6,17 @@
   <title>Document</title>
 </head>
 <body>
-  <main class="container">
+  <main class="container" *ngIf="WeatherData">
     <div class="wrapper">
       <div class="card-rotate-bg"></div>
   
       <div class="card">
         <div class="card-head">
           <!-- <img src="https://i.postimg.cc/RVFh2hkV/portfolio.jpg" alt="image" class="product-card"> -->
+          <img src"#" *ngIf="temp > 15">
+          <img src="#" *ngIf="temp < 15">
           <h4> {{country}} </h4> 
-          <h2> {{temp}}°C</h2>
+          <h2> {{temp | number: '1.0-0'}}°C</h2>
           
           
         </div>
@@ -30,16 +32,16 @@
           
   
           <div class="wrapper-flex">
-            <div class="last-bid">Min Temp: {{temp_min}}°C</div>
+            <div class="last-bid">Min Temp: {{temp_min | number: '1.0-0'}}°C</div>
   
             <div class="maxTemp">
-              Max Temp : {{temp_max}}°C
+              Max Temp : {{temp_max} | number: '1.0-0'}°C
             </div>
           </div>
           <br/>
           <br/>
           <div class="wrapper-flex">
-            <div class="last-bid">Feels Like: {{feels_like}}°C</div>
+            <div class="last-bid">Feels Like: {{feels_like | number: '1.0-0'}}°C</div>
   
             <div class="maxTemp">
               {{desc}}
